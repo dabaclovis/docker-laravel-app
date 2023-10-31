@@ -29,5 +29,5 @@ RUN curl -sS https://getcomposer.org/installer | php --  --install-dir=/usr/loca
 COPY . /var/www/html/
 RUN composer install
 
-CMD ["php","artisan","serve","--host=0.0.0.0"]
-
+CMD ["php","artisan","serve","--host=0.0.0.0", "--port=8000"]
+EXPOSE 8000
